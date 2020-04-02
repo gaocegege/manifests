@@ -49,5 +49,5 @@ spec:
             # - --aws-region=us-west-1
           # Repository location of the ALB Ingress Controller.
           image: docker.io/amazon/aws-alb-ingress-controller
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
       serviceAccountName: alb-ingress-controller

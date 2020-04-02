@@ -25,7 +25,7 @@ spec:
         - name: CSI_ENDPOINT
           value: unix:///var/lib/csi/sockets/pluginproxy/csi.sock
         image: amazon/aws-efs-csi-driver:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: efs-plugin
         volumeMounts:
         - mountPath: /var/lib/csi/sockets/pluginproxy/
@@ -37,7 +37,7 @@ spec:
         - name: ADDRESS
           value: /var/lib/csi/sockets/pluginproxy/csi.sock
         image: quay.io/k8scsi/csi-attacher:v0.4.2
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: csi-attacher
         volumeMounts:
         - mountPath: /var/lib/csi/sockets/pluginproxy/

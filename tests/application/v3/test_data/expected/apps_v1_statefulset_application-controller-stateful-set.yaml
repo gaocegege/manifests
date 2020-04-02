@@ -22,7 +22,7 @@ spec:
         - name: project
           value: $(project)
         image: gcr.io/kubeflow-images-public/kubernetes-sigs/application:1.0-beta
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: manager
       serviceAccountName: application-controller-service-account
   volumeClaimTemplates: []

@@ -23,7 +23,7 @@ spec:
       containers:
         - name: efs-plugin
           image: amazon/aws-efs-csi-driver:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           args :
             - --endpoint=$(CSI_ENDPOINT)
             - --logtostderr
@@ -36,7 +36,7 @@ spec:
               mountPath: /var/lib/csi/sockets/pluginproxy/
         - name: csi-attacher
           image: quay.io/k8scsi/csi-attacher:v0.4.2
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           args:
             - --csi-address=$(ADDRESS)
             - --v=5

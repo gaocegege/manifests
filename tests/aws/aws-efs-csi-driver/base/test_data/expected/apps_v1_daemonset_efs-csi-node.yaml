@@ -21,7 +21,7 @@ spec:
         - name: CSI_ENDPOINT
           value: unix:/csi/csi.sock
         image: amazon/aws-efs-csi-driver:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: efs-plugin
         securityContext:
           privileged: true
@@ -50,7 +50,7 @@ spec:
             fieldRef:
               fieldPath: spec.nodeName
         image: quay.io/k8scsi/driver-registrar:v0.4.2
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: csi-driver-registrar
         volumeMounts:
         - mountPath: /csi

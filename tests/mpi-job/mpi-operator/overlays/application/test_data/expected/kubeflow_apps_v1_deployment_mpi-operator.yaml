@@ -44,6 +44,6 @@ spec:
         - --kubectl-delivery-image
         - mpioperator/kubectl-delivery:latest
         image: mpioperator/mpi-operator:0.1.0
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: mpi-operator
       serviceAccountName: mpi-operator

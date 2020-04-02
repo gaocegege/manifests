@@ -33,7 +33,7 @@ spec:
               key: project
               name: parameters
         image: gcr.io//profile-controller:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /metrics
@@ -58,7 +58,7 @@ spec:
         command:
         - /access-management
         image: gcr.io/kubeflow-images-public/kfam:vmaster-gf3e09203
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /metrics

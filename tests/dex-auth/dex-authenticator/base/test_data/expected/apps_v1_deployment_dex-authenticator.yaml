@@ -21,7 +21,7 @@ spec:
         - --config
         - config.yaml
         image: mintel/dex-k8s-authenticator:1.2.0
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /healthz

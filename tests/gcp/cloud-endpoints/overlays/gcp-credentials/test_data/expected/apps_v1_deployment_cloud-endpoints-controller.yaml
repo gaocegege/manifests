@@ -25,7 +25,7 @@ spec:
         - name: GOOGLE_APPLICATION_CREDENTIALS
           value: /var/run/secrets/sa/admin-gcp-sa.json
         image: gcr.io/cloud-solutions-group/cloud-endpoints-controller:0.2.1
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: cloud-endpoints-controller
         readinessProbe:
           failureThreshold: 2

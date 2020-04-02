@@ -28,7 +28,7 @@ spec:
         command:
         - /manager
         image: gcr.io/kubeflow-images-public/profile-controller:vmaster-g34aa47c2
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /metrics
@@ -50,7 +50,7 @@ spec:
         command:
         - /access-management
         image: gcr.io/kubeflow-images-public/kfam:vmaster-gf3e09203
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         livenessProbe:
           httpGet:
             path: /metrics

@@ -26,6 +26,6 @@ spec:
         - --aws-vpc-id=
         - --aws-region=us-west-2
         image: docker.io/amazon/aws-alb-ingress-controller:v1.1.5
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: alb-ingress-controller
       serviceAccountName: alb-ingress-controller

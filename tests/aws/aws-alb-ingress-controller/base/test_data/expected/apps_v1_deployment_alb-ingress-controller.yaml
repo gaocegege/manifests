@@ -23,6 +23,6 @@ spec:
         - --ingress-class=alb
         - --cluster-name=
         image: docker.io/amazon/aws-alb-ingress-controller:v1.1.5
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: alb-ingress-controller
       serviceAccountName: alb-ingress-controller

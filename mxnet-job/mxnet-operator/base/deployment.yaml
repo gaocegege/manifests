@@ -26,6 +26,6 @@ spec:
             fieldRef:
               fieldPath: metadata.name
         image: mxjob/mxnet-operator:v1beta1
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: mxnet-operator
       serviceAccountName: mxnet-operator
