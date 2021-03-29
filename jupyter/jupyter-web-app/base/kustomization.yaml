@@ -7,6 +7,7 @@ kind: Kustomization
 # but maybe if we changed that to use ConfigMapRef then the patch would correctly
 # override the patch applied in base_v3
 resources:
+- frontend-deployment.yaml
 - cluster-role-binding.yaml
 - cluster-role.yaml
 - deployment.yaml
@@ -23,6 +24,9 @@ images:
 - name: gcr.io/kubeflow-images-public/jupyter-web-app
   newName: gcr.io/kubeflow-images-public/jupyter-web-app
   newTag: vmaster-ge4456300
+- name: ccr.ccs.tencentyun.com/kubeflow-oteam/jupyter-web-app-frontend
+  newName: ccr.ccs.tencentyun.com/kubeflow-oteam/jupyter-web-app-frontend
+  newTag: latest
 # We need the name to be unique without the suffix because the original name is what
 # gets used with patches
 configMapGenerator:
