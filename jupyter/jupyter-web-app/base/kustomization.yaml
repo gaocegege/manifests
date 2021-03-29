@@ -7,7 +7,6 @@ kind: Kustomization
 # but maybe if we changed that to use ConfigMapRef then the patch would correctly
 # override the patch applied in base_v3
 resources:
-- frontend-deployment.yaml
 - cluster-role-binding.yaml
 - cluster-role.yaml
 - deployment.yaml
