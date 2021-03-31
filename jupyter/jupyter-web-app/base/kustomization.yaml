@@ -21,8 +21,8 @@ commonLabels:
   kustomize.component: jupyter-web-app
 images:
 - name: gcr.io/kubeflow-images-public/jupyter-web-app
-  newName: gcr.io/kubeflow-images-public/jupyter-web-app
-  newTag: vmaster-ge4456300
+  newName: ccr.ccs.tencentyun.com/kubeflow-oteam/jupyter-web-app
+  newTag: v1.0.0-g2bd63238
 - name: ccr.ccs.tencentyun.com/kubeflow-oteam/jupyter-web-app-frontend
   newName: ccr.ccs.tencentyun.com/kubeflow-oteam/jupyter-web-app-frontend
   newTag: latest

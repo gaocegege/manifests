@@ -16,6 +16,10 @@ spec:
         - containerPort: 4200
       - image: gcr.io/kubeflow-images-public/jupyter-web-app
         name: jupyter-web-app
+        command:
+          - python
+          - main.py
+          - --dev
         ports:
         - containerPort: 5000
         volumeMounts:
